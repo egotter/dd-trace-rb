@@ -33,6 +33,7 @@ module Datadog
             Datadog.logger.debug(message)
           else
             Datadog.logger.error(message)
+            Datadog.logger.info(e.backtrace.join("\n"))
           end
 
           # Update statistics
