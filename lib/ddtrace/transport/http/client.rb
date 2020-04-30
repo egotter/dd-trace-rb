@@ -43,7 +43,7 @@ module Datadog
           if stats.consecutive_errors > 0
             Datadog::Logger.log.debug(message)
           else
-            Datadog::Logger.log.error(message)
+            Datadog::Logger.log.info(message)
             Datadog::Logger.log.info(e.backtrace.join("\n"))
           end
 
