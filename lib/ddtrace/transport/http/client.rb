@@ -44,6 +44,7 @@ module Datadog
             Datadog::Logger.log.debug(message)
           else
             Datadog::Logger.log.error(message)
+            Datadog::Logger.log.info(e.backtrace.join("\n"))
           end
 
           # Update statistics
